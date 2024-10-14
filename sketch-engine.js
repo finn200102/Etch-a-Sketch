@@ -6,6 +6,9 @@ function buttonClick() {
     let percent = (1 / 18) * 100;
     div.style.width = percent.toString() + "%";
     div.style.border = "2px solid black";
+    div.addEventListener("mouseover", () => {
+      div.style.backgroundColor = "green";
+    });
 
     div.classList.add("pixel");
     sketchBoard.appendChild(div);
