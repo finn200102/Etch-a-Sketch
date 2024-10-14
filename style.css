@@ -4,21 +4,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0;
   margin: 0;
   gap: 10px;
 }
 
 header {
   background-color: burlywood;
-  padding: 0;
+  padding: 10px;
   margin: 0;
+  text-align: center;
 }
 
 #layout {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 10px;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+button {
+  box-shadow: none;
 }
 
 #sketch-board {
@@ -36,8 +47,15 @@ header {
   margin: 0;
 }
 
+#content-holder {
+  display: flex;
+  justify-content: center;
+}
+
 #content {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 850px;
+  background-color: black;
 }
