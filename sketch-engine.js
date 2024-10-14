@@ -1,11 +1,11 @@
-function buttonClick() {
+function buttonClick(numberPerSide = 16) {
   const sketchBoard = document.querySelector("#sketch-board");
-  for (let i = 0; i < 256; i++) {
+  for (let i = 0; i < numberPerSide ** 2; i++) {
     const div = document.createElement("div");
     div.style.backgroundColor = "blue";
-    let percent = (1 / 18) * 100;
+    let percent = (1 / numberPerSide) * 100;
     div.style.width = percent.toString() + "%";
-    div.style.border = "2px solid black";
+    // div.style.border = "2px solid black";
     div.addEventListener("mouseover", () => {
       div.style.backgroundColor = "green";
     });
@@ -13,6 +13,12 @@ function buttonClick() {
     div.classList.add("pixel");
     sketchBoard.appendChild(div);
   }
+}
+
+function showPopup() {
+  let number = prompt("Please enter number:");
+  clearField();
+  buttonClick((numberPerSide = number));
 }
 
 function clearField() {
@@ -30,4 +36,9 @@ btn.addEventListener("click", () => {
 const btnClear = document.querySelector("#button-clear");
 btnClear.addEventListener("click", () => {
   clearField();
+});
+
+const btnChange = document.querySelector("#button-change");
+btnChange.addEventListener("click", () => {
+  showPopup();
 });
