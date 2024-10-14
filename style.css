@@ -1,10 +1,32 @@
+html,
+body {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+header {
+  background-color: burlywood;
+  padding: 0;
+  margin: 0;
+}
+
+#layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 #sketch-board {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 90vmin;
-  height: 90vmin;
+  width: 850px;
   overflow: auto;
 }
 
