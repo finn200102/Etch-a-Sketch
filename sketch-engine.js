@@ -12,7 +12,19 @@ function buttonClick() {
   }
 }
 
+function clearField() {
+  const sketchBoard = document.querySelector("#sketch-board");
+  while (sketchBoard.firstChild) {
+    sketchBoard.removeChild(sketchBoard.firstChild);
+  }
+}
+
 const btn = document.querySelector("#button");
 btn.addEventListener("click", () => {
   buttonClick();
+});
+
+const btnClear = document.querySelector("#button-clear");
+btnClear.addEventListener("click", () => {
+  clearField();
 });
