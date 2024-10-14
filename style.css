@@ -1,0 +1,21 @@
+#sketch-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vmin;
+  height: 90vmin;
+  overflow: auto;
+}
+
+.pixel {
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  margin: 0;
+}
+
+#content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
